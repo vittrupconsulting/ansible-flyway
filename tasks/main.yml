@@ -1,2 +1,10 @@
 ---
-# tasks file for flyway
+
+  - name: Execute flyway {{ command }}
+    shell:
+      /opt/flyway-4.2.0/flyway
+      -url={{ url }}
+      -user={{ user }}
+      -password={{ password }}
+      -locations={{ locations }}
+      {{ command }}
